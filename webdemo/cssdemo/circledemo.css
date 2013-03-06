@@ -1,0 +1,14 @@
+body{
+	background-image:url(images/1.jpg);
+	background-repeat:no-repeat;
+}
+
+.curvebox{
+	width:250px;
+	padding:1em;
+	background-color:#B0C4DE;
+	border:2px solid #33527B;
+	color:#33527B;
+	Opacity:0.7;                   /*设置透明度为70%，非IE浏览器用*/
+    Filter:alpha(opacity=70);      /*IE浏览器用*/
+}

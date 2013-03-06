@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title>表单风格demo01</title>
+	<link rel="stylesheet" type="text/css" href="formdemo01.css">
+</head>
+<body>
+<form method="post" action="example1.html">
+	<p>What's your name
+		<br /><input type="text" name="name" id="name" />
+	</p>
+
+	<p>Select your favorite color:<br />
+	<select name="color" id="color">
+		<option value="blue">blue</option>
+		<option value="red">red</option>
+		<option value="green">green</option>
+		<option value="yellow">yellow</option>
+	</select>
+	</p>
+
+	<p>Are you male or female?<br />
+		<input type="radio" name="sex" id="male" value="male" />Male
+		<input type="radio" name="sex" id="male" value="female" />Female
+	</p>
+
+	<p>Comments:<br />
+		<textarea name="comments" id="comments" cols="30" rows="4">
+		</textarea>
+	</p>
+
+	<p><input type="submit" name="btnSubmit" id="btnSubmit" value="Submit" /></p>
+</form>
+</body>
+</html>

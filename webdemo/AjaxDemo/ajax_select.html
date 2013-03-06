@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>ajax demo2</title>
+<script language="JavaScript">
+	var xmlHttp;
+	function createXMLHttp(){
+		if(window.XMLHttpRequest){
+			xmlHttp=new XMLHttpRequest();
+		}else{
+			xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+	}
+	function getCity(){
+		createXMLHttp();
+		xmlHttp.open("POST","allarea.xml");
+		xmlHttp.onreadystatechange=getCityCallBack;
+		xmlHttp.send(null);
+	}
+	function getCityCallBack(){
+		if(xmlHttp.readyState==4){
+			if(xmlHttp.status==200){
+				//取得allarea节点下得全部节点
+				var allarea=xmlHttp.responseXML.getElementsByTagName("allarea")[0].childNodes;
+
+			}
+		}
+	}
+</script>
+</head>
+<body onload="getCity()">
+<form action="" method="post"> 
+	请选择喜欢的城市:
+		<select name="city">
+			<option value="0">请选择城市</option>
+		</select>
+</form>
+</body>
+</html>

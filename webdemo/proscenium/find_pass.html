@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="scaulove.css" />
+	<script type="text/javascript">
+	function check(obj)
+	{
+		var id=obj.id;
+		var value=obj.value.replace(/^\s+/,'').replace(/\s+$/,'');
+		//姓名检验
+		if(id=="find")
+		{
+			if(value==""){
+				document.getElementById("findError").innerHTML="<span class='error'>"+'此项不能为空'+"</span>";
+			}
+			else
+			{
+				document.getElementById("findError").innerHTML="<span class='success'>"+'成功发送'+"</span>";
+			}
+			return;
+		}
+	}</script>
+	<title>找回密码</title>
+</head>
+<body>
+	<div class="span">
+		<span class="span"><a href="scaulove.html">回到首页</a></span>
+	    <span class="span">/找回密码</span>
+	</div>
+	<!--findpassword_content begin-->
+	<div id="findpassword_content">
+		<div class="find_content">
+			<h1>用户找回密码</h1>
+			<br />
+			<p>忘记了密码？请输入注册时填写的会员名或邮箱地址，我们会把重置密码的邮件发送到您的邮箱。</p>
+			<br />
+			<form action="" onsubmit="check(this);" method="post" name="findpassword_form">
+				<ul class="findpassword">
+					<li>
+						<label>会员名或者邮箱:</label>
+						<input type="text" id="find" onblur="check(this);"/>
+						<span id="findError"></span>
+			        </li>
+					<li>
+						<input type="submit" class="find_submit" value="完成"/>
+						<input type="hidden" />
+					</li>
+				</ul>	
+			</form>
+		</div>
+	</div>
+	<!--findpassword_content end-->
+	
+</body>
+</html>

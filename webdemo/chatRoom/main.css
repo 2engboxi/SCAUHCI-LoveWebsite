@@ -1,0 +1,41 @@
+.whole{
+	padding:		50px;
+	background-color:#FFECF5;
+}
+#online{
+	border-color:	black;
+	border-width:	1px;
+	border-style:	solid;
+	padding:		10px;
+	margin:			0px 10px 10px 10px;
+	width:			230px;
+	height:			500px;
+}
+.content{
+	border-color:	black;
+	border-width:	1px;
+	border-style:	groove;
+	padding:		10px;
+	margin:			0px 10px 10px 10px;
+	width:			1000px;
+	height:			500px;
+	float:			right;
+}
+.function{
+	border-color:	black;
+	border-width:	1px;
+	border-style:	groove;
+	padding:		10px;
+	margin:			0px 10px 10px 10px;
+	width:			100%;
+	height:			150px;
+	clear:			right;
+}
+.bottom{
+	border-color:	black;
+	border-width:	1px;
+	border-style:	dashed;
+    padding:		10px;
+	margin:			0px 10px 10px 10px;
+	background-color:#a7cece;
+}

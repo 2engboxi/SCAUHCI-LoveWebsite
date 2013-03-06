@@ -1,0 +1,139 @@
+安装jdk配置环境变量并测试java
+
+
+1.安装jdk并配置环境变量 
+下载:jdk1.5.0_08：有了这个安装程序，你就可以开发和运行跟JAVA有关的程序 
+按照JDK的提示来安装，安装完之后设置环境变量 
+JDK环境变量配置的步骤如下： 
+1.我的电脑-->属性-->高级-->环境变量. 
+2.配置用户变量: 
+a.新建 JAVA_HOME 
+C:\Program Files\Java\j2sdk1.5.0 （JDK的安装路径） 
+b.新建 PATH 
+%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin 
+c.新建 CLASSPATH 
+.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar 
+3.测试环境变量配置是否成功： 
+开始-->运行--〉CMD 
+键盘敲入： JAVAC JAVA 
+出现相应的命令，而不是出错信息，即表示配置成功！ 
+
+第一个简单程序HelloWorld： 
+打开记事本，输入如下代码: 
+class HelloWorld{ 
+public static void main(String[] args) { 
+System.out.println("Hello World!"); 
+} 
+} 
+保存为HelloWorld.java（文件名一定要和文件内的类名保持一致，之一大小写也要一样） 
+然后打开DOS（命令框内输入“cmd”并回车） 
+进入HelloWorld.ava文件所在文件夹（“cd”命令可以进入文件夹） 
+输入以下命令： 
+javac HelloWorld.java（编译） 
+回车 
+java HelloWorld（运行） 
+回车 
+OK了！看是不是输出了“Hello World!”
+
+
+
+
+
+
+
+jdk配置环境变量
+
+右键点我的电脑，属性，选择高级，环境变量
+1 首先新建一个系统变量，名称是java_home值是你的安装路经，例如你的安装路径是C盘下的jdk1.5,那你的值里就应该写 C:\jdk1.5
+
+2 再建一个系统变量 CLASSPATH，值是你的类库就是jdk下面的lib下下面的.jar文件，
+既在值得部分写入你要用到的基本类库，
+如果你的安装路经是c:\jdk1.5那么值是 .;c:\jdk1.5\lib\dt.jar;c:\jdk1.5\lib\tools.jar （注意最前面加的是一个点和一个分号）。
+3 最后将环境变量PATH在原来的值得后面加入 ;c:\jdk1.5\bin
+
+刚开始学的建议把安装路径改成C:jdk1.5,然后环境变量的值就可以复制这个里面的，等后面明白了这么写的原理后就可以自己写了。
+
+设置完成后就可以在dos下面运行你的java程序了。
+
+
+
+
+
+
+
+
+
+
+首先，请确保按照下面进行jdk的配置。
+如果你的东西在D盘，那么首先转到D盘下，然后执行javac hello.java   java hello来运行；
+
+
+JDK安装设置环境变量 
+一、前言 
+
+JDK(Java Development Kit )是一切java应用程序的基础，可以说，所有的java应用程序是构建在这个之上的。它是一组API，也可以说是一些java Class。目前已经正式发布的最新版本是JDK1.3。考虑到我对linux不熟悉，而且大多数都是在MS系统下，所以，在这里我用的是win2000。 
+
+二、下载，安装 
+
+下载地址为JAVA官方站点：java.sun.com，国内也到处都是。 
+
+Windows下，直接运行.exe文件，安装到一个目录，我这里用F:\jdk13作为例子。 
+
+三、配置 
+
+桌面上选择“我的电脑”(右键) 
+
+高级 
+
+环境变量 
+
+在“系统变量”--->“新建” 
+
+在变量名中输入：CLASSPATH，变量值中输入： 
+
+F:\JDK13\LIB\dt.JAR;F:\JDK13\LIB\TOOLS.JAR;F:\JDK13\BIN;然后确定； 
+
+好了，配置完了，要重新启动计算机后，环境变量才能有效的。 
+
+四、测试 
+
+(1)用文本编辑器写一个简单的java程序： 
+
+public class HelloWorld { 
+
+public static void main(String args[]) { 
+
+System.out.println("Hello World!"); 
+
+} 
+
+} 
+
+这个例子就是著名的“Hello World”，它的功能就是显示“Hello World”。 
+
+注意：该文件名称必须为“HelloWorld.java”，大小写也区分。细心的朋友会注意到就是和public class后的名字一样的。 
+
+(2)编译：在dos命令提示符下执行：（注意大小写） 
+
+javac HelloWorld.java 
+
+如果正常的话，将生成HelloWorld.class文件。 
+
+(3)运行：在dos命令提示符下执行：（注意大小写） 
+
+java HelloWorld 
+
+这里有一个java初学者很有可能遇到的问题（不怕笑话，我也是）就是输入： 
+
+java HelloWorld.class 
+
+多了后面的.class，一定要注意，否则会出现下面的错误： 
+
+Exception in thread "main" java.lang.NoClassDefFoundError:HelloWorld/class 
+
+（本人猜想，是不是java翻译“.”的时候换成了“/”，或者是其他的本人不知道的原因） 
+
+好了，运行java HelloWorld应该会出现伟大的“Hello World”了。 
+
+到这一步，你已经成功配置好了JDK，可以开始漫长而痛苦(对于象我一样的，以前不懂java的朋友来说，可以用“痛苦”来形容，不理解的概念，不熟悉的java api...，不过，不要急，我将和大家一起慢慢入门，慢慢提高... ...)的Java过程了。
+ 

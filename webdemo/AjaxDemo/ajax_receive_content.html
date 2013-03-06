@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Ajax Demo<title>
+</head>
+<body>
+<script language="JavaScript">
+	var xmlHttp;
+	function createXMLHttp(){
+		if(window.XMLHttpRequest)
+			xmlHttp=new XMLHttpRequest();
+		else
+			xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	function showMsg(){
+		createXMLHttp();
+		xmlHttp.open("POST","content.html");
+		//设置请求完成之后处理的回调函数
+		xmlHttp.onreadystatechange=showMsgCallback;
+		xmlHttp.send(null);
+	}
+	function showMsgCallback(){
+		if(xmlHttp.readyState==4){//数据返回完毕
+			if(xmlHttp.status==200){
+				var text=xmlHttp.responseText;
+				document.getElementById("msg").innerHTML(text);
+			}
+		}
+	}
+</script>
+<input type="button" onclick="showMsg()" value="调用">
+<span id="msg"></span>
+</body>
+</html>

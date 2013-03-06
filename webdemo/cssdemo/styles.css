@@ -1,0 +1,31 @@
+td,th{
+	font:0.8em Verdana,Geneva,Arial,Helvetica,sans-serif;
+}
+
+.datatable{
+	border:1px solid #338BA6;
+	border-collapse:collapse;
+}
+
+.datatable td{
+	border:1px solid #D6DDE6;
+	text-align:right;
+	padding:4px;
+}
+
+.datatable th{
+	border:1px solid #828282;
+	background-color:#BCBCBC;
+	font-weight:bold;
+	text-align:left;
+	padding:4px;
+}
+
+.datatable caption{
+	font:bold 0.9em Times;
+	background-color:#B0C4DE;
+	color:#33517A;
+	padding-top:3px;
+	padding-bottom:2px;
+	border:1px solid #789AC6;
+}
